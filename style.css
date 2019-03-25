@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+img {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin:auto;
+}
