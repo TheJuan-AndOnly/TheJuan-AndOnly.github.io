@@ -8,3 +8,90 @@ img {
     height: auto;
     margin:auto;
 }
+
+.term {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-style: solid;
+    width:45%;
+    padding: 20px;
+    margin: 15px 8px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scheduleBTN {
+    
+}
+
+.bottom-btn {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.top-btn {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.pageTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:80%;
+    margin:auto;
+    padding:10px;;
+    border-style: solid;
+}
+
+.nav-title {
+    padding: 0px 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.totalCreditHoursTitle {
+    padding: 15px;
+}
+
+.course {
+    text-align: center;
+   
+    width: 250px;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title {
+    margin: 0px;
+    padding: 15px 0px;
+}
+
+.term-title {
+    margin: 0;
+    padding-bottom: 15px;
+}
