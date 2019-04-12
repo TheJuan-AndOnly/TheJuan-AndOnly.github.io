@@ -95,3 +95,52 @@ html {
     margin: 0;
     padding-bottom: 15px;
 }
+
+.radio-class-type {
+    -webkit-appearance: none;
+	background-color: green;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+    
+    margin: 0% 10%;
+    
+}
+
+.radio-class-type:active, .radio-class-type:checked:active, .radio-class-type:checked
+{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0px 1px 3px rgba(0,0,0,0.5);
+    background-color: red;
+}
+
+#radioBTN-classtype-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+    margin: 20px 0px;
+}
+
+th, td {
+  padding: 15px;
+}
+
+
+.course-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
