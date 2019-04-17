@@ -23,9 +23,6 @@ img {
     margin-right: auto;
 }
 
-.scheduleBTN {
-    
-}
 
 .bottom-btn {
     display: flex;
@@ -144,3 +141,21 @@ th, td {
     flex-direction: row;
     justify-content: center;
 }
+
+#program-evaluation {
+    border-style: solid;
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+
+.program-evaluation-box {
+    border: solid;
+    border-color: lightgray;
+    border-style: solid;
+    padding: 15px;
+    margin: 15px 0px;
+}
+
+
