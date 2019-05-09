@@ -1,14 +1,16 @@
 <!doctype html>
 <html>
 <head>
-<!-- 
-<link rel="stylesheet" type="text/css" href="
-        style.css
-      ">
-    -->
-<link rel="stylesheet" type="text/css" href="
-         TheJuan-AndOnly.github.io/style.css
-      ">
+
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+   
+ <link rel="stylesheet" type="text/css" href="TheJuan-AndOnly.github.io/style.css">
+    
+<!--<script type="text/javascript" src="script.js">
+    </script>-->
+
+    <script type="text/javascript" src="TheJuan-AndOnly.github.io/blob/master/script.js">
+    </script> 
 
 <meta charset="UTF-8">
 <title>North Central College Yearly Schedule</title>
@@ -16,28 +18,8 @@
     
         <a href="main.html"><h3 class="nav-title"> Yearly Schedule </h3></a>
         <a href="class-selection.html"><h3 class="nav-title"> Class Selection </h3></a>
-        <a href="program-evaluation.html"><h3 class="nav-title"> Program Evaluation </h3></a>
-        <!-- 
-
-offer infor that a user can register for classes in each page
-
-chaneg the name CLASS SELECTION -> course catalogue 
-
-
--->
-        
-        
-
-    </nav><!--
-    <script type="text/javascript" src="
-        script.js
-      ">
-    </script>
-    -->
-    <script type="text/javascript" src="
-        TheJuan-AndOnly.github.io/blob/master/script.js
-      ">
-    </script>
+        <a href="program-evaluation.html"><h3 class="nav-title"> Program Evaluation </h3></a>  
+    </nav>
 </head>
 
 <body>
@@ -52,81 +34,59 @@ chaneg the name CLASS SELECTION -> course catalogue
 
             <h2 class="term-title"> Fall Term</h2>
         
-            <div id="fall-course-list" class="course-list">
+            <div id="fall-course-list" class="course-list"></div>
+            <div id="fall-registered-course-list"></div>
         
-                <section id="fall-course" class="course">Click the buttons in the fall term lol</section>
-        
-            </div>
-
-
             <div class="top-btn">
-            <button class="scheduleBTN" onclick="addCourseToTerm('fall', 'core')" >Add A Major Related Class</button>
-                
-            <button class="scheduleBTN" onClick="">Add a Gen Ed Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-fall-core" onClick="getTerm('fall', 'core')"> Add A Major Related Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-fall-genEd" onClick="getTerm('fall', 'genEd')">Add a Gen Ed Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-fall-elective" onClick="getTerm('fall', 'elective')"> Add Elective </button>   
+            <button class="scheduleBTN" id="scheduleBTN-fall-elective" onClick="getTerm('fall', 'elective')"> Add Non Major Class </button>
             </div>
-
-            <div class="bottom-btn">
-                
-            <button onclick=""> Add Non Major Class </button>
-                
-            <p class="totalCreditHoursTitle"> Total Credit Hours: </p>
-            </div>
-
+        
+            <p class="totalCreditHoursTitle"> Total CreditHours: </p>
         </div>
     <div class="term">
 
             <h2 class="term-title"> Winter Term</h2>
-            <div class="course-list"></div>
-
+            <div id="winter-course-list" class="course-list" ></div>
+            <div id="winter-registered-course-list"></div>
 
             <div class="top-btn">
-            <button class="scheduleBTN">Add A Major Related Class</button>
-            <button class="scheduleBTN">Add a Gen Ed Class</button>
-            </div>
-
-            <div class="bottom-btn">
-            <button>Add Non Major Class</button>
-            <p class="totalCreditHoursTitle"> Total Credit Hours: </p>
-            </div>
+            <button class="scheduleBTN" id="scheduleBTN-winter-core" onClick="getTerm('winter', 'core')">Add A Major Related Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-winter-genEd" onClick="getTerm('winter', 'genEd')">Add a Gen Ed Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-winter-elective" onClick="getTerm('winter', 'elective')">Add Non Major Class</button>
+            
+            </div><p class="totalCreditHoursTitle"> Total Credit Hours: </p>
 
         </div>
     <div class="term">
 
             <h2 class="term-title"> Spring Term </h2>
-            <div class="course-list"></div>
-
+            <div id="spring-course-list" class="course-list"></div>
+            <div id="spring-registered-course-list"></div>
 
             <div class="top-btn">
-            <button class="scheduleBTN">Add A Major Related Class</button>
-            <button class="scheduleBTN">Add a Gen Ed Class</button>
-            </div>
-
-            <div class="bottom-btn">
-            <button>Add Non Major Class</button>
-            <p class="totalCreditHoursTitle"> Total Credit Hours: </p>
-            </div>
+            <button class="scheduleBTN" id="scheduleBTN-spring-core" onClick="getTerm('spring', 'core')">Add A Major Related Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-spring-genEd" onClick="getTerm('spring', 'genEd')">Add a Gen Ed Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-spring-elective" onClick="getTerm('spring', 'elective')">Add Non Major Class</button>
+            
+            </div><p class="totalCreditHoursTitle"> Total Credit Hours: </p>
 
         </div>
     <div class="term">
 
             <h2 class="term-title"> Summer Term</h2>
-            <div class="course-list"></div>
-
+            <div id="summer-course-list" class="course-list"></div>
+            <div id="summer-registered-course-list"></div>
 
             <div class="top-btn">
-            <button class="scheduleBTN">Add A Major Related Class</button>
-            <button class="scheduleBTN">Add a Gen Ed Class</button>
-            </div>
-
-            <div class="bottom-btn">
-            <button>Add Non Major Class</button>
-            <p class="totalCreditHoursTitle"> Total Credit Hours: </p>
-            </div>
+            <button class="scheduleBTN" id="scheduleBTN-summer-core" onClick="getTerm('summer', 'core')">Add A Major Related Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-summer-genEd" onClick="getTerm('summer', 'genEd')">Add a Gen Ed Class</button>
+            <button class="scheduleBTN" id="scheduleBTN-summer-elective" onClick="getTerm('summer', 'elective')">Add Non Major Class</button>
+            
+            </div><p class="totalCreditHoursTitle"> Total Credit Hours: </p>
 
         </div>
-
-    
-    
-<!-- <img src="Graphics/commingSoon.jpg" alt=""/> -->
 </body>
 </html>

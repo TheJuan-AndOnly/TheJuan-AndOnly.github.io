@@ -1,146 +1,88 @@
 @charset "UTF-8";
 /* CSS Document */
-
-
 img {
     display: flex;
     width: 80%;
     height: auto;
-    margin:auto;
+    margin: auto;
 }
-
 .term {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    
     border-style: solid;
-    width:45%;
+    width: 75%;
     padding: 20px;
     margin: 15px 8px;
-    
     margin-left: auto;
     margin-right: auto;
 }
-
-
 .bottom-btn {
     display: flex;
     flex-direction: row;
     padding: 15px;
 }
-
 .top-btn {
     display: flex;
     flex-direction: row;
     padding: 15px;
 }
-
 .pageTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-
 }
-
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width:80%;
-    margin:auto;
-    padding:10px;;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
     border-style: solid;
 }
-
 .nav-title {
     padding: 0px 15px;
 }
-
 a {
     text-decoration: none;
 }
-
 html {
     font-family: 'Open Sans', sans-serif;
 }
-
 .totalCreditHoursTitle {
     padding: 15px;
 }
-
 .course {
     text-align: center;
-   
     width: 250px;
 }
-
 .course-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 8px;
 }
-
 .section-title {
     margin: 0px;
     padding: 15px 0px;
 }
-
 .term-title {
     margin: 0;
     padding-bottom: 15px;
 }
-
-.radio-class-type {
-    -webkit-appearance: none;
-	background-color: green;
-	border: 1px solid #cacece;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	padding: 9px;
-	border-radius: 3px;
-	display: inline-block;
-	position: relative;
-    
-    margin: 0% 10%;
-    
-}
-
-.radio-class-type:active, .radio-class-type:checked:active, .radio-class-type:checked
-{
-    box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0px 1px 3px rgba(0,0,0,0.5);
-    background-color: red;
-}
-
-#radioBTN-classtype-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table {
-  border-collapse: collapse;
-  width: 80%;
+.table {
+    table-layout: auto;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-collapse: collapse;
+    border-color: red;
+    height: auto;
     margin: 20px 0px;
 }
 
-th, td {
-  padding: 15px;
-}
-
-
-.course-selection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 #program-evaluation {
     border-style: solid;
@@ -148,14 +90,164 @@ th, td {
     width: 80%;
     margin: auto;
 }
-
-
 .program-evaluation-box {
     border: solid;
-    border-color: lightgray;
+    border-color: green;
     border-style: solid;
     padding: 15px;
     margin: 15px 0px;
 }
+.course-visualization-box {
+    display: flex;
+    margin: 10px 0px;
+    flex-direction: row;
+}
+.course-title {
+    padding: 5px;
+    margin: 8px;
+}
+.scheduleBTN {
+    background-color: #44c767;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    margin: 8px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 5px 5px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+.scheduleBTN:hover {
+    background-color: #5cbf2a;
+}
+.one-course {
+    border: solid;
+    margin: 8px 0px;
+    border-color: antiquewhite;
+}
+
+.program-evaluation-section-details {
+        line-height: 40%;
+}
+
+.program-evaluation-course-fulfilment-indicator {
+    color:red;
+}
+
+.program-evaluation-table {
+    text-align: center;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    border-spacing: 20px;
+}
+
+.program-evaluation-cell {
+    padding:15px;
+    border-style: none;
+    color:white;
+    background: linear-gradient(0deg, rgba(155,0,0,1) 0%,  rgba(255,0,0,0.5) 100%);
+}
+.program-evaluation-cell:hover {
+    padding:15px;
+    border-style: none;
+    color:white;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%,  rgba(255,150,150,1) 100%);
+}
+
+#fall-inquiry {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.text{
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    line-height: normal;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
 
 
+
+.term-choise-BTN {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    width: 150px;
+    margin: 0px auto;
+	font-family:Arial;
+	font-size:21px;
+	font-weight:bold;
+	padding:13px 24px;
+	text-decoration:none;
+}
+.term-choise-BTN:hover
+{
+
+	background:linear-gradient(to bottom, #b8d9a8 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+
+.course-selection
+{
+    table-layout: auto;
+    border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+    margin: 5px;
+    word-wrap: break-word;
+}
+
+#fall-inquiry {
+    display: none;
+}
+
+#fall-programEvaluation-CourseSelectionTableDiv {
+    position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
