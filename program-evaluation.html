@@ -3,78 +3,86 @@
 <head>
 <meta charset="UTF-8">
     
-<!--<link rel="stylesheet" type="text/css" href="style.css">-->
-   
- <link rel="stylesheet" type="text/css" href="TheJuan-AndOnly.github.io/style.css"> 
-    <!--
-<script type="text/javascript" src="script.js"></script>-->
+<!--
+<link rel="stylesheet" type="text/css" href="style.css"> 
+<script type="text/javascript" src="script.js"></script>
+-->
+<script type="text/javascript" src="TheJuan-AndOnly.github.io/script.js"> </script> 
+<link rel="stylesheet" type="text/css" href="TheJuan-AndOnly.github.io/style.css"> 
 
-    <script type="text/javascript" src="TheJuan-AndOnly.github.io/script.js">
-    </script> 
-<title>progrem-evaluation</title>
+
+   
+   
+<title>Degree Evaluation</title>
      <nav class="nav">
-    
-        <a href="main.html"><h3 class="nav-title"> Yearly Schedule </h3></a>
-        <a href="class-selection.html"><h3 class="nav-title"> Class Selection </h3></a>
-        <a href="program-evaluation.html"><h3 class="nav-title"> Program Evaluation </h3></a>
-        
+         <table width="0"  cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr>
+              <td><a href="main.html"><button class="main-pageBTN"><h3 class="nav-title"> Yearly Schedule </h3></button></a></td>
+              <td><a href="program-evaluation.html"><button class="main-pageBTN"><h3 class="nav-title"> Degree Evaluation </h3></button></a></td>
+            </tr>
+          </tbody>
+        </table>
     </nav>
 </head>
 
 <body>
     
     <section class="pageTitle">
-        <h1 class="section-title"> Program Evalutation</h1>
-        <h3 class="section-title"> 20018 - 2019 </h3>
+        <h1 class="section-title"> Degree Evalutation</h1>
+        <h3 class="section-title"> Computer Science </h3>
     </section>
     <hr>
-
-    <a href="#title-Gen-Ed"><button>en Ed Classes</button></a>
-    <a href="#title-major"><button href="#title-major">Major Electives</button></a>
-    <a href="#title-electives"><button>Electives</button></a>
-    
+    <div id="quickSectionLink">
+        <a href="#title-Gen-Ed"><button class="quickSectionLink">Gen Ed Classes</button></a>
+        <a href="#title-major"><button href="#title-major" class="quickSectionLink">Major Electives</button></a>
+        <a href="#title-electives"><button class="quickSectionLink">Electives</button></a>
+    </div>
     
     
     <div id="program-evaluation">
         
         <div class="program-evaluation-box" id="program-evalutaion_GenEd-classes">
-            <h1 id="title-Gen-Ed">Gen-Ed Classes</h1>
+            <h1 id="title-Gen-Ed" class="program-evaluation-title">Gen-Ed Classes</h1>
                 <section class="program-evaluation-section-details">
                     
-                    <div id="fall-inquiry" onclick="termPromptForClassesOFF()">
+                    <div class="term-inquiry" id="term-inquiry-genEd" onclick="termPromptForClassesOFF()">
                         <div class="text">
                         <p>Choose the term for which courses you want to register</p><br>
-                        <button class="term-choise-BTN" id="fall-term-btn" onClick="getTable('fall', 'genEd')">FALL</button><br>
-                        <button class="term-choise-BTN" id="winter-term-btn" onClick="getTerm('winter','genEd')">WINTER</button><br>
-                        <button class="term-choise-BTN" id="spring-term-btn" onClick="getTerm('spring','genEd')">SPRING</button><br>
-                        <button class="term-choise-BTN" id="summer-term-btn" onClick="getTerm('summer','genEd')">SUMMER</button>
+                        
+                            <button class="term-choise-BTN" id="fall-term-btn" onClick="getTable('fall', 'genEd'); programEvaluationCourseSelectionTableOFF('fall','genEd')">FALL</button><br>
+                        
+                            <button class="term-choise-BTN" id="winter-term-btn" onClick="getTable('winter','genEd'); programEvaluationCourseSelectionTableOFF('winter','genEd')">WINTER</button><br>
+                        
+                            <button class="term-choise-BTN" id="spring-term-btn" onClick="getTable('spring','genEd'); programEvaluationCourseSelectionTableOFF('spring','genEd')">SPRING</button><br>
+                        
+                            <button class="term-choise-BTN" id="summer-term-btn" onClick="getTable('summer','genEd'); programEvaluationCourseSelectionTableOFF('fall','genEd')">SUMMER</button>
                         </div>
                     </div>
                     
-                    <div id="fallprogramEvaluationCourseSelectionTableDiv">
-                        
-                        
-                        
-                    </div>
+                    
+                    <div id="fallprogramEvaluationCourseSelectionTableDiv-genEd"></div>
+                    <div id="winterprogramEvaluationCourseSelectionTableDiv-genEd"></div>
+                    <div id="springprogramEvaluationCourseSelectionTableDiv-genEd"></div>
+                    <div id="summerprogramEvaluationCourseSelectionTableDiv-genEd"></div>
                     
                     <div class="term-specific-course-register-list"></div>
-                    
                     <table class="program-evaluation-table" border="2" cellspacing="2" >
                       <tbody>
                         <tr>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Composition</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Communication</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Math</td>
+                          <td class="program-evaluation-cell" id="composition" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Composition</td>
+                          <td class="program-evaluation-cell" id="communicaiton" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Communication</td>
+                          <td class="program-evaluation-cell" id="math" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Math</td>
                         </tr>
                         <tr>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Lab Science</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Science</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Humanities</td>
+                          <td class="program-evaluation-cell" id="labScience" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Lab Science</td>
+                          <td class="program-evaluation-cell" id="Science" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Science</td>
+                          <td class="program-evaluation-cell" id="Humanities" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Humanities</td>
                         </tr>
                         <tr>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Social Science</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Religion/Ethics</td>
-                          <td class="program-evaluation-cell" onClick="termPromptForClassesON()">Leadership Ethics Values</td>
+                          <td class="program-evaluation-cell" id="Social Science" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Social Science</td>
+                          <td class="program-evaluation-cell" id="religion" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Religion/Ethics</td>
+                          <td class="program-evaluation-cell" id="LEV" onClick="termPromptForClassesON('genEd'); turnGreen(this.id)">Leadership Ethics Values</td>
                             
                         </tr>
                           <tr>
@@ -83,49 +91,81 @@
                           </tr>
                       </tbody>
                     </table>
-                    
                 </section>
         </div>
+        
+        
         <div class="program-evaluation-box" id="program-evalutaion_Major-classes">
-            <h1 id="title-major">Major Classes</h1>
+            <h1 id="title-major"  class="program-evaluation-title">Major Classes</h1>
             
-             <section>
+            <div class="term-inquiry" id="term-inquiry-core" onclick="termPromptForClassesOFF()">
+                        <div class="text">
+                        <p>Choose the term for which courses you want to register</p><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('core')">FALL</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('core')">WINTER</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('core')">SPRING</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('core')">SUMMER</button>
+                        </div>
+                    </div>
+            
+             <div>
+                     <div id="fallprogramEvaluationCourseSelectionTableDiv-core"></div>
+                    <div id="winterprogramEvaluationCourseSelectionTableDiv-core"></div>
+                    <div id="springprogramEvaluationCourseSelectionTableDiv-core"></div>
+                    <div id="summerprogramEvaluationCourseSelectionTableDiv-core"></div>
+                    
                  <table class="program-evaluation-table" border="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 160 - Computer Science I</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 161 - Computer Science II</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 210 - Data Structures and Algorithms</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC160">CSC 160 - Computer Science I</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC161">CSC 161 - Computer Science II</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC210">CSC 210 - Data Structures and Algorithms</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 220 - Computer System Concepts</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 230 - Discrete Structures I</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 306 - Software Development in C++</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC220">CSC 220 - Computer System Concepts</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC230">CSC 230 - Discrete Structures I</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC306">CSC 306 - Software Development in C++</td>
                     </tr>
                       <tr>
-                      <td class="program-evaluation-cell" colspan="3" onClick="termPromptForClassesON()">CSC 495 - Capstone Seminar</td> 
+                      <td class="program-evaluation-cell" colspan="3" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC495">CSC 495 - Capstone Seminar</td> 
                       </tr>
                   </tbody>
                 </table>
             </section>
         </div>
         <div class="program-evaluation-box" id="program-evalutaion_elective-classes">
-            <h1 id="title-electives">Electives Classes</h1>
+            <h1 id="title-electives"  class="program-evaluation-title">Electives Classes</h1>
             <h4>Choose six electives, at least three of which must be chosen from the following:</h4>
+            
+            <div class="term-inquiry" id="term-inquiry-elective" onclick="termPromptForClassesOFF()">
+                        <div class="text">
+                        <p>Choose the term for which courses you want to register</p><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('elective')">FALL</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('elective')">WINTER</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('elective')">SPRING</button><br>
+                        <button class="term-choise-BTN" onClick="termPromptForClassesOFF('elective')">SUMMER</button>
+                        </div>
+                    </div>
+            
+            
              <section>
-                 
+                    <div id="fallprogramEvaluationCourseSelectionTableDiv-elective"></div>
+                    <div id="winterprogramEvaluationCourseSelectionTableDiv-elective"></div>
+                    <div id="springprogramEvaluationCourseSelectionTableDiv-elective"></div>
+                    <div id="summerprogramEvaluationCourseSelectionTableDiv-elective"></div>
+                    
                  
                  <table class="program-evaluation-table" border="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 215  - Introduction to Web Programming</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 415 - Web Applications</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 436 - Human Computer Interaction</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC215">CSC 215  - Introduction to Web Programming</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC415">CSC 415 - Web Applications</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC436">CSC 436 - Human Computer Interaction</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 464 - Data Mining</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 453 - Systems Analysis</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON()">CSC 460 - Database Management Systems</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC464">CSC 464 - Data Mining</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC453">CSC 453 - Systems Analysis</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460 - Database Management Systems</td>
                     </tr>
                   </tbody>
                 </table>
@@ -135,14 +175,31 @@
             <h1>Communication Classes</h1>
             <h4>Two of the following courses (<em>one of which may be used to fulfill the College's general education speech communication requirement</em>):</h4>
              <section>
-                    <p>COM 100 - Introduction to Public Speaking</p><br>
-                    <p>COM 200 - Interpersonal Communication</p><br>
-                    <p>COM 214 - Group Process</p><br>
-                    <p>COM 230 - Business and Professional Communication</p><br>
-                    <p>ENG 265 - Style</p><br>
-                    <p>IFS 320 - Multimedia Presentations</p><br>
-                    <p>LEV 230 - Conflict Resolution</p><br>
-                    <p>MED 200 - Digital Writing</p><br>
+                    <div id="fallprogramEvaluationCourseSelectionTableDiv-electiveCom"></div>
+                    <div id="winterprogramEvaluationCourseSelectionTableDiv-electiveCom"></div>
+                    <div id="springprogramEvaluationCourseSelectionTableDiv-electiveCom"></div>
+                    <div id="summerprogramEvaluationCourseSelectionTableDiv-electiveCom"></div>
+                    
+                 
+                 <table class="program-evaluation-table" border="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM100">COM 100 - Introduction to Public Speaking</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM200">COM 200 - Interpersonal Communication</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM214">COM 214 - Group Process</td>
+                    </tr>
+                    <tr>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM230">COM 230 - Business and Professional Communication</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-END265">ENG 265 - Style</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460 - Database Management Systems</td>
+                    </tr>
+                    <tr>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-IFS320">IFS 320 - Multimedia Presentations</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-LEG230">LEV 230 - Conflict Resolution</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-MED200">MED 200 - Digital Writing</td>
+                    </tr>
+                  </tbody>
+                </table>
                 </section>
         </div>
         

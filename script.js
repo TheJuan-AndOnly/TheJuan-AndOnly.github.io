@@ -1,904 +1,3 @@
-//courseArr -> object with objects in it
-   /*var courseARR = {
-    
- 
-    //CSC140
-    CSC140: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC140",
-        coursename: "Intro to Computational Problem Solving",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        },
-        registerFall: function(){
-            alert("Registered for fall");
-            //registerCourse('fall',this.courseNUM);
-        },
-        registerWinter: function(){
-            alert("Registered for Winter");
-            //registerCourse('fall',this.courseNUM);
-        },
-        registerSpring: function(){
-            alert("Registered for Spring");
-            //registerCourse('fall',this.courseNUM);
-        },
-        registerSummer: function(){
-            alert("Registered for Summer");
-            //registerCourse('fall',this.courseNUM);
-        }
-
-
-    },
-    //CSC 160 - Computer Science I
-    CSC160: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },        
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC160",
-        coursename: "Computer Sceince 1",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 161 - Computer Science II
-    CSC161: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC161",
-        coursename: "Computer Sceince 2",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-    },
-    //CSC 210 - Data Structures and Algorithms
-    CSC210: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },        
-
-        courseNUM: "CSC210",
-        coursename: "Data Structures and Algorithms",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 220 - Computer System Concepts
-    CSC220: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC220",
-        coursename: "Computer Systems Concepts",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 230 - Discrete Structures I
-    CSC230: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC230",
-        coursename: "Discrete Structures",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 306 - Software Development in C++
-    CSC306: {
-        isMajor: function () {
-            return true;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return false;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC306",
-        coursename: "Software Development in C++",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-    },
-    //CSC 495 - Capstone Seminar
-    CSC495: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC494",
-        coursename: "Capstone Seminar",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 215 - Introduction to Web Programming
-    CSC215: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC215",
-        coursename: "Intro to Web Programming",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 415 - Web Applications
-    CSC415: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC415",
-        coursename: "Web Applications",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 436 - Human Computer Interaction
-    CSC436: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC436",
-        coursename: "Human Computer Interaction",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 453 - Systems Analysis
-    CSC453: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC453",
-        coursename: "Systems Analysis",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 460 - Database Management Systems
-    CSC460: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC460",
-        coursename: "Database Managment Systems",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-
-
-    },
-    //CSC 464 - Data Mining
-    CSC464: {
-        isMajor: function () {
-            return false;
-        },
-        isGenEd: function () {
-            return false;
-        },
-        isElective: function () {
-            return true;
-        },
-        isCommunication: function () {
-            return false;
-        },
-
-        courseNUM: "CSC464",
-        coursename: "Data Mining",
-        credits: 3,
-
-        fallHour: "12:00 pm - 3:00 pm",
-        fallDays: "Monday Wednesday Friday",
-        fallLocation: " WSC 234",
-        fallFaculty: " Professor Kim",
-
-        winterHour: "12:00 pm - 3:00 pm",
-        winterDays: "Fridays",
-        winterLocation: " WSC 234",
-        winterFaculty: " Professor Kim",
-
-        springHour: "12:00 pm - 3:00 pm",
-        springDays: "Tuesday",
-        springLocation: " WSC 234",
-        springFaculty: " Professor Kim",
-
-        fallSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.fallHour + "<br>" +
-                this.fallDays + "<br>" +
-                this.fallLocation + "<br>" +
-                this.fallFaculty;
-        },
-
-        winterSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.winterHour + "<br>" +
-                this.winterDays + "<br>" +
-                this.winterLocation + "<br>" +
-                this.winterFaculty;
-        },
-
-        springSchedule: function () {
-            return this.courseNUM + "<br>" +
-                this.coursename + "<br>" +
-                this.springHour + "<br>" +
-                this.springDays + "<br>" +
-                this.springLocation + "<br>" +
-                this.springFaculty;
-        }
-        
-    }
-    
-}
-*/
-
 var courseArr = [];
 
 function course(courseType,courseNUMBER, courseName, credits,
@@ -916,28 +15,28 @@ function course(courseType,courseNUMBER, courseName, credits,
     {
         if (courseType=="core")
             {
-                return true;
+                return false;
             }
     }
     this.isGenEd = function()
     {
         if (courseType=="genEd")
             {
-                return true;
+                return false;
             }
     }
     this.isElective = function()
     {
         if (courseType=="elective")
             {
-                return true;
+                return false;
             }
     }
     this.isElectiveCom = function()
     {
         if (courseType=="electiveCom")
             {
-                return true;
+                return false;
             }
     }
     
@@ -995,14 +94,6 @@ function course(courseType,courseNUMBER, courseName, credits,
         };
     
 }
-
-
-
-
-
-
-
-
 
 //core
 var CSC140 = new course("core","CSC140", "Introduction to Computational Problem Solving",3,
@@ -1119,8 +210,67 @@ var MED200 = new course("electiveCom", "MED200", "Digital Writing", 3,
                        "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
                        "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
                        "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs");
+var ARB101 = new course("genEd", "ARB101","Arabic - 101",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
+var ARB102 = new course("genEd", "ARB102","Arabic - 102",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
+var ARB103 = new course("genEd", "ARB103","Arabic - 103",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
+var ARB201 = new course("genEd", "ARB201","Arabic - 201",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
+var ARB202 = new course("genEd", "ARB202","Arabic - 202",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
+var ARB203 = new course("genEd", "ARB203","Arabic - 203",3, "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs",
+                       "9:00am - 10:00am", " M W F", "WSC-120", "Proferssor Dr. Mr/Mrs")
 
-courseArr.push(CSC140,CSC160,CSC161,CSC210,CSC215,CSC220,CSC230,CSC306,CSC415,CSC436,CSC453,CSC460,CSC464,CSC495,COM100,COM200,COM214,COM230,ENG256,IFS320,LEV230,MED200);
+
+//assigning course type values to courses
+ARB101.isGenEd=true;
+ARB102.isGenEd=true;
+ARB103.isGenEd=true;
+ARB201.isGenEd=true;
+ARB202.isGenEd=true;
+ARB203.isGenEd=true;
+
+CSC140.isMajor=true;
+CSC160.isMajor=true;
+CSC161.isMajor=true;
+CSC210.isMajor=true;
+CSC220.isMajor=true;
+CSC230.isMajor=true;
+CSC306.isMajor=true;
+CSC495.isMajor=true;
+
+CSC215.isElective=true;
+CSC415.isElective=true;
+CSC453.isElective=true;
+CSC436.isElective=true;
+CSC460.isElective=true;
+CSC464.isElective=true;
+
+COM100.isElectiveCom=true;
+COM200.isElectiveCom=true;
+COM214.isElectiveCom=true;
+COM230.isElectiveCom=true;
+ENG256.isElectiveCom=true;
+IFS320.isElectiveCom=true;
+LEV230.isElectiveCom=true;
+MED200.isElectiveCom=true;
+
+//pushing all values to array of courses for search purposes
+courseArr.push(CSC140,CSC160,CSC161,CSC210,CSC215,CSC220,CSC230,CSC306,CSC415,CSC436,CSC453,CSC460,CSC464,CSC495,COM100,COM200,COM214,COM230,ENG256,IFS320,LEV230,MED200,ARB101,ARB102,ARB103,ARB201,ARB202,ARB203);
 
 //var x = new courseARR.CSC140
 var academicYear1 = {
@@ -1159,114 +309,163 @@ var academicYear1 = {
     }
 }
 
-
-function getTerm(term, courseType) {
+//preliminary function to filter courses by term  & course type
+function getTerm(term, courseType) 
+{
     
     let idName = term+"-course-list";
     
     if (term == 'fall') {
-        switch (courseType)
-        {
-                case 'core':
-                for (let i in courseArr) {
-                if (courseArr[i].isMajor()) {
-                    
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                    
-                }}break;
-                case 'elective':
-                for (let i in courseArr) {
-                if (courseArr[i].isElective()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term, courseArr[i].courseNUM);
-                }}break;
+        if(courseType=="core")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isMajor==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
         
-                case 'genEd':
-                for (let i in courseArr) {
-                if (courseArr[i].isGenEd()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                }}
-        }
+            }
+        if(courseType=="genEd")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isGenEd==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
+        
+            }
+        if(courseType=="elective")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isElective==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
+        
+            }
     }
    
-    if (term == 'winter') {
-        if (courseType == 'core') {
-            for (let i in courseArr) {
-                if (courseArr[i].isMajor()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                }
-            }
-        }
-        if (courseType == 'elective') {
-            for (let i in courseArr) {
-                if (courseArr[i].isElective()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                }
-            }
-        }
-        if (courseType == 'genEd') {
-            for (let i in courseArr) {
-                if (courseArr[i].isGenEd()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                }
-            }
-        }
 
+    if (term == 'winter') {
+        if(courseType=="core")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isMajor==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
+        
+            }
+        if(courseType=="genEd")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isGenEd==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
+        
+            }
+        if(courseType=="elective")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isElective==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
+                }
+        
+            }
     }
     if (term == 'spring') {
-        if (courseType == 'core') {
-            for (let i in courseArr) {
-                if (courseArr[i].isMajor()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                } else {
-                    continue;
+        if(courseType=="core")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isMajor==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-        if (courseType == 'elective') {
-            for (let i in courseArr) {
-                if (courseArr[i].isElective()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+        if(courseType=="genEd")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isGenEd==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-        if (courseType == 'genEd') {
-            for (let i in courseArr) {
-                if (courseArr[i].isGenEd()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+        if(courseType=="elective")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isElective==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-
     }
+   
     if (term == 'summer') {
-        if (courseType == 'core') {
-            for (let i in courseArr) {
-                if (courseArr[i].isMajor()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
-                } else {
-                    continue;
+        if(courseType=="core")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isMajor==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-        if (courseType == 'elective') {
-            for (let i in courseArr) {
-                if (courseArr[i].isElective()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+        if(courseType=="genEd")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isGenEd==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-        if (courseType == 'genEd') {
-            for (let i in courseArr) {
-                if (courseArr[i].isGenEd()) {
-                    document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+        if(courseType=="elective")
+            {
+                for (let i in courseArr) 
+                {
+                    if (courseArr[i].isElective==true) 
+                    {
+                        document.getElementById(idName).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                    }
                 }
+        
             }
-        }
-
     }
+   
+
+   
 }
 
-function writeCourseHTMLTable(x, term) {
+//displays HTML table for user visualization and registration purposes
+function writeCourseHTMLTable(x, term)
+{
    
     
     if (term == 'fall') { 
@@ -1284,10 +483,9 @@ function writeCourseHTMLTable(x, term) {
     }
 }
 
-
+//function to "register" for courses attached with the button from the HTML table
 function registerCourseToProgramEvl(term , classNumber)
     {
-        alert("Issue: "+classNumber.toString());
         
         var NameX = term +"-course-list";
         if(term =='fall' && academicYear1.terms.FA.course1 == null)
@@ -1433,6 +631,8 @@ function registerCourseToProgramEvl(term , classNumber)
         
 
     }
+
+//displays inforaiton regarding your registered courses on your scheduel after user has registered
 function addHTMLCourseToSchedule(term,x)
 {
     var Name = term+"-registered-course-list";
@@ -1442,27 +642,46 @@ function addHTMLCourseToSchedule(term,x)
         {
             if(courseArr[i].courseNUM==x)
                 {
-                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <strong>"+courseArr[i].courseNUM+"</strong> </section><section class='course-title'> <strong>"+courseArr[i].courseName+"</strong> </section></div><div class='course-visualization-box'><section class='course-title'> "+courseArr[i].fallHours+" & "+courseArr[i].fallDays+" </section><section class='course-title'> "+courseArr[i].fallLocation+" </section></div> </div>";
+                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <h4><strong>"+courseArr[i].courseNUM+"</strong></h4> </section><section class='course-title'> <h4><strong>"+courseArr[i].courseName+"</strong></h4> </section></div><div class='course-visualization-box'><section class='course-title'><strong>Time:</strong> "+courseArr[i].fallHours+"<br> <strong>Days: </strong> "+courseArr[i].fallDays+" </section><section class='course-title'><strong>Location:</strong> "+courseArr[i].fallLocation+" </section><section class='course-title'><strong>Credits:</strong> "+courseArr[i].credits+" </section></div> </div>";
                 }
         }
         
 
 }
-
-
-function termPromptForClassesON()
+//term selection window + buttons
+function termPromptForClassesON(courseType)
 {
-    document.getElementById("fall-inquiry").style.display = "block";
+    if(courseType=="genEd")
+        {
+            document.getElementById("term-inquiry-genEd").style.display = "block";
+        }
+    if(courseType=="core"){
+        document.getElementById("term-inquiry-core").style.display = "block";
+    }
+    if(courseType=="elective"){
+        document.getElementById("term-inquiry-elective").style.display = "block";
+    }
+
+}
+//off window for term selection
+function termPromptForClassesOFF(courseType)
+{
+     if(courseType=="genEd")
+        {
+            document.getElementById("term-inquiry-genEd").style.display = "none";
+        }
+    if(courseType=="core"){
+        document.getElementById("term-inquiry-core").style.display = "none";
+    }
+    if(courseType=="elective"){
+        document.getElementById("term-inquiry-elective").style.display = "none";
+    }
 }
 
-function termPromptForClassesOFF()
-{
-    document.getElementById("fall-inquiry").style.display = "none";
-}
-
+//display different html table for Course Evaluation purposes
 function getTable(term, courseType)
 {
-    var Name = term+"programEvaluationCourseSelectionTableDiv";
+    var Name = term+"programEvaluationCourseSelectionTableDiv-"+courseType;
  
     if(term=='fall')
         {
@@ -1470,22 +689,209 @@ function getTable(term, courseType)
                 {
                     for( let i in courseArr)
                         {
-                             document.getElementById(Name).innerHTML += writeCourseHTMLTable(courseArr[i], term);
+                           if(courseArr[i].isGenEd==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
                         }
-                   
+                }
+            if(courseType=='core')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isMajor==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='elective')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElective==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='electiveCom')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElectiveCom==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
                 }
         }
-  
-    
-    
-    
+    if(term=='spring')
+        {
+            if(courseType=='genEd')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isGenEd==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='core')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isMajor==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='elective')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElective==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='electiveCom')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElectiveCom==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+        }
+    if(term=='winter')
+        {
+            if(courseType=='genEd')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isGenEd==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='core')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isMajor==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='elective')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElective==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='electiveCom')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElectiveCom==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+        }
+    if(term=='summer')
+        {
+            if(courseType=='genEd')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isGenEd==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='core')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isMajor==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='elective')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElective==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+            if(courseType=='electiveCom')
+                {
+                    for( let i in courseArr)
+                        {
+                           if(courseArr[i].isElectiveCom==true)
+                           {
+                               document.getElementById(Name).innerHTML += writeCourseHTMLTableProgramEval(courseArr[i], term);
+                            }
+                        }
+                }
+        }
 }
-
-function programEvaluationCourseSelectionTableOFF()
+// table from course eval + new funtion
+function writeCourseHTMLTableProgramEval(x, term) 
+{     //var NameXX = term+"programEvaluationCourseSelectionTableDiv-"+courseType;
+ 
+    if (term == 'fall') { 
+        
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td>"+x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.fallHours + "</td><td>" + x.fallDays + "</td><td>" + x.fallLocation + "</td><td>" + x.winterFaculty + "</td><td><button classx.courseNUM='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=noTable('"+term+"programEvaluationCourseSelectionTableDiv-genEd') >Register: "+x.courseNUM+"</button></td></tr></tbody></table></div>";
+    }
+    if (term == 'winter') {
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.winterHours + "</td><td>" + x.winterDays + "</td><td>" + x.winterLocation + "</td><td>" + x.winterFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=noTable('"+term+"programEvaluationCourseSelectionTableDiv-genEd') >Register</button></td></tr></tbody></table></div>";
+    }
+    if (term == 'spring') {
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.springHours + "</td><td>" + x.springDays + "</td><td>" + x.springLocation + "</td><td>" + x.springFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=noTable('"+term+"programEvaluationCourseSelectionTableDiv-genEd') >Register</button></td></tr></tbody></table></div>";
+    }
+    if (term == 'summer') {
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.summerHours + "</td><td>" + x.summerDays + "</td><td>" + x.summerLocation + "</td><td>" + x.summerFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=noTable('"+term+"programEvaluationCourseSelectionTableDiv-genEd') >Register</button></td></tr></tbody></table></div>";
+    }
+}
+//notifies user that courses has been registred 
+function turnGreen(id)
 {
-   document.getElementById("fall-programEvaluation-CourseSelectionTableDiv").style.display = "block";
+    document.getElementById(id).style.background="linear-gradient(0deg, rgba(214,255,220,1) 0%, rgba(26,133,0,1) 100%)";
 }
-
+//Program evaluation term selection OFF + course selction table ON
+function programEvaluationCourseSelectionTableOFF(term,courseType)
+{
+    var Name = term+"programEvaluationCourseSelectionTableDiv-"+courseType;
+    
+    document.getElementById(Name).style.display = "block";
+    document.getElementById("term-inquiry-genEd").style.display="none";
+}
+//program evaluation table off
+function noTable(idName)
+{
+    document.getElementById(idName).style.display="none";
+}
 
 
 

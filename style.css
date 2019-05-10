@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ns9.wixdns.netns9.wixdns.netns9.wixdns.netns9.wixdns.net@charset "UTF-8";
 /* CSS Document */
 img {
     display: flex;
@@ -11,6 +11,8 @@ img {
     flex-direction: column;
     align-items: center;
     border-style: solid;
+    border-color: rgba(191,191,191,0.70);
+
     width: 75%;
     padding: 20px;
     margin: 15px 8px;
@@ -33,15 +35,16 @@ img {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    color: white;
 }
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    margin: 0px auto 20px auto;
     padding: 10px;
-    border-style: solid;
+    
 }
 .nav-title {
     padding: 0px 15px;
@@ -50,7 +53,7 @@ a {
     text-decoration: none;
 }
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto',arial,sans-serif;
 }
 .totalCreditHoursTitle {
     padding: 15px;
@@ -67,11 +70,12 @@ html {
 }
 .section-title {
     margin: 0px;
-    padding: 15px 0px;
+    padding: 15px 0px 0px 0px;
 }
 .term-title {
     margin: 0;
     padding-bottom: 15px;
+    color: white;
 }
 .table {
     table-layout: auto;
@@ -85,17 +89,18 @@ html {
 
 
 #program-evaluation {
-    border-style: solid;
     padding: 15px;
     width: 80%;
     margin: auto;
 }
 .program-evaluation-box {
     border: solid;
-    border-color: green;
+    border-color: white;
     border-style: solid;
+    border-width: 10px;
     padding: 15px;
     margin: 15px 0px;
+    background:rgba(255,255,255,0.5);
 }
 .course-visualization-box {
     display: flex;
@@ -126,9 +131,10 @@ html {
     background-color: #5cbf2a;
 }
 .one-course {
-    border: solid;
     margin: 8px 0px;
-    border-color: antiquewhite;
+    background: rgb(168,168,168);
+background: linear-gradient(0deg, rgba(168,168,168,0.5) 0%, rgba(255,255,255,0.87) 100%);
+
 }
 
 .program-evaluation-section-details {
@@ -146,6 +152,8 @@ html {
     margin-right: auto;
     border-style: none;
     border-spacing: 20px;
+    
+    
 }
 
 .program-evaluation-cell {
@@ -161,7 +169,7 @@ html {
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%,  rgba(255,150,150,1) 100%);
 }
 
-#fall-inquiry {
+.term-inquiry {
   position: fixed;
   display: none;
   width: 100%;
@@ -221,22 +229,26 @@ html {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
 	background-color:#72b352;
 }
+td
+{
+    padding: 5px;
+    font-size: 12px;
+    justify-content: center;
+}
 
 .course-selection
 {
     table-layout: auto;
     border: 1px solid #1C6EA4;
-  background-color: #EEEEEE;
-  width: 100%;
-  text-align: left;
-  border-collapse: collapse;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
     margin: 5px;
     word-wrap: break-word;
 }
 
-#fall-inquiry {
-    display: none;
-}
+
 
 #fall-programEvaluation-CourseSelectionTableDiv {
     position: fixed;
@@ -251,3 +263,67 @@ html {
   z-index: 2;
   cursor: pointer;
 }
+
+
+.quickSectionLink {
+     background-color: white;
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    margin: 20px 15px;
+    border: 1px solid gray;
+    display: inline-block;
+    cursor: pointer;
+    color: lightslategray;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 15px;
+
+}
+#quickSectionLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.program-evaluation-title {
+    text-align: center;
+}
+
+body {
+   background: linear-gradient(0deg, rgba(168,168,168,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.main-pageBTN {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+	background-color:#007dc1;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	padding:6px 24px;
+	text-decoration:none;
+    
+}
+.main-pageBTN:hover
+{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+	background-color:#0061a7;
+}
+
