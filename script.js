@@ -642,7 +642,7 @@ function addHTMLCourseToSchedule(term,x)
         {
             if(courseArr[i].courseNUM==x)
                 {
-                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <h4><strong>"+courseArr[i].courseNUM+"</strong></h4> </section><section class='course-title'> <h4><strong>"+courseArr[i].courseName+"</strong></h4> </section></div><div class='course-visualization-box'><section class='course-title'><strong>Time:</strong> "+courseArr[i].fallHours+"<br> <strong>Days: </strong> "+courseArr[i].fallDays+" </section><section class='course-title'><strong>Location:</strong> "+courseArr[i].fallLocation+" </section><section class='course-title'><strong>Credits:</strong> "+courseArr[i].credits+" </section></div> </div>";
+                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <h4><strong>"+courseArr[i].courseNUM+"</strong></h4> </section><section class='course-title'> <h4><strong>"+courseArr[i].courseName+"</strong></h4> </section></div><div class='course-visualization-box'><section class='course-title'><strong>Time:</strong> "+courseArr[i].fallHours+"<br> <strong>Days: </strong> "+courseArr[i].fallDays+" </section><section class='course-title'><strong>Location:</strong> "+courseArr[i].fallLocation+" </section><section class='course-title' id='course-credits'><strong>Credits:</strong> "+courseArr[i].credits+" </section></div> </div>";
                 }
         }
         
@@ -892,6 +892,7 @@ function noTable(idName)
 {
     document.getElementById(idName).style.display="none";
 }
+
 
 
 
