@@ -470,16 +470,16 @@ function writeCourseHTMLTable(x, term)
     
     if (term == 'fall') { 
         
-        return "<div class=" + "course-selection" + "><table><tbody><tr><td>"+x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.fallHours + "</td><td>" + x.fallDays + "</td><td>" + x.fallLocation + "</td><td>" + x.winterFaculty + "</td><td><button classx.courseNUM='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=registerCourseToProgramEvl('fall','"+x.courseNUM+"')>Register: "+x.courseNUM+"</button></td></tr></tbody></table></div>";
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td class='course-selection-Name'>"+x.courseNUM + "</td><td class='course-selection-Name'>" + x.courseName + "</td><td>" + x.fallHours + "</td><td>" + x.fallDays + "</td><td>" + x.fallLocation + "</td><td>" + x.winterFaculty + "</td><td><button classx.courseNUM='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=registerCourseToProgramEvl('fall','"+x.courseNUM+"')>Register: "+x.courseNUM+"</button></td></tr></tbody></table></div>";
     }
     if (term == 'winter') {
-        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.winterHours + "</td><td>" + x.winterDays + "</td><td>" + x.winterLocation + "</td><td>" + x.winterFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+"onClick=registerCourseToProgramEvl('winter','"+x.courseNUM+"') >Register</button></td></tr></tbody></table></div>";
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td class=''>" +x.courseNUM + "</td><td class='course-selection-Name'>" + x.courseName + "</td><td>" + x.winterHours + "</td><td>" + x.winterDays + "</td><td>" + x.winterLocation + "</td><td>" + x.winterFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+"onClick=registerCourseToProgramEvl('winter','"+x.courseNUM+"') >Register</button></td></tr></tbody></table></div>";
     }
     if (term == 'spring') {
-        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.springHours + "</td><td>" + x.springDays + "</td><td>" + x.springLocation + "</td><td>" + x.springFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+"onClick=registerCourseToProgramEvl('spring','"+x.courseNUM+"')>Register</button></td></tr></tbody></table></div>";
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td class=''>" +x.courseNUM + "</td><td class='course-selection-Name'>" + x.courseName + "</td><td>" + x.springHours + "</td><td>" + x.springDays + "</td><td>" + x.springLocation + "</td><td>" + x.springFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+"onClick=registerCourseToProgramEvl('spring','"+x.courseNUM+"')>Register</button></td></tr></tbody></table></div>";
     }
     if (term == 'summer') {
-        return "<div class=" + "course-selection" + "><table><tbody><tr><td>" +x.courseNUM + "</td><td>" + x.courseName + "</td><td>" + x.summerHours + "</td><td>" + x.summerDays + "</td><td>" + x.summerLocation + "</td><td>" + x.summerFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=registerCourseToProgramEvl('summer','"+x.courseNUM+"') >Register</button></td></tr></tbody></table></div>";
+        return "<div class=" + "course-selection" + "><table><tbody><tr><td class=''>" +x.courseNUM + "</td><td class='course-selection-Name'>" + x.courseName + "</td><td>" + x.summerHours + "</td><td>" + x.summerDays + "</td><td>" + x.summerLocation + "</td><td>" + x.summerFaculty + "</td><td><button class='register-Button' value="+x.courseNUM+" id="+x.courseNUM+" onClick=registerCourseToProgramEvl('summer','"+x.courseNUM+"') >Register</button></td></tr></tbody></table></div>";
     }
 }
 
@@ -642,7 +642,7 @@ function addHTMLCourseToSchedule(term,x)
         {
             if(courseArr[i].courseNUM==x)
                 {
-                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <h4><strong>"+courseArr[i].courseNUM+"</strong></h4> </section><section class='course-title'> <h4><strong>"+courseArr[i].courseName+"</strong></h4> </section></div><div class='course-visualization-box'><section class='course-title'><strong>Time:</strong> "+courseArr[i].fallHours+"<br> <strong>Days: </strong> "+courseArr[i].fallDays+" </section><section class='course-title'><strong>Location:</strong> "+courseArr[i].fallLocation+" </section><section class='course-title' id='course-credits'><strong>Credits:</strong> "+courseArr[i].credits+" </section></div> </div>";
+                    document.getElementById(Name).innerHTML += "<div class='one-course'><div class='course-visualization-box'><section class='course-title'> <h4><strong>"+courseArr[i].courseNUM+"</strong></h4> </section><section class='course-title'> <h4><strong>"+courseArr[i].courseName+"</strong></h4> </section></div><div class='course-visualization-box'><section class='course-title'><strong>Time:</strong> "+courseArr[i].fallHours+" <strong></section><section class='course-title'>Days: </strong> "+courseArr[i].fallDays+" </section><section class='course-title'><strong>Location:</strong> "+courseArr[i].fallLocation+" </section><section class='course-title' id='course-credits'><strong>Credits:</strong> "+courseArr[i].credits+" </section></div> </div>";
                 }
         }
         
@@ -877,7 +877,7 @@ function writeCourseHTMLTableProgramEval(x, term)
 //notifies user that courses has been registred 
 function turnGreen(id)
 {
-    document.getElementById(id).style.background="linear-gradient(0deg, rgba(214,255,220,1) 0%, rgba(26,133,0,1) 100%)";
+    document.getElementById(id).style.background="green";
 }
 //Program evaluation term selection OFF + course selction table ON
 function programEvaluationCourseSelectionTableOFF(term,courseType)
@@ -893,6 +893,13 @@ function noTable(idName)
     document.getElementById(idName).style.display="none";
 }
 
+function hideDisclaimer()
+{
+    document.getElementById("disclaimer").style.display="none";
+    document.getElementById("main").style.display="block";
+    document.getElementById("nav").style.display="flex";
+    
+}
 
 
 

@@ -3,34 +3,60 @@
 <head>
 <meta charset="UTF-8">
     
-<!--
 <link rel="stylesheet" type="text/css" href="style.css"> 
 <script type="text/javascript" src="script.js"></script>
--->
+<!-- 
 <script type="text/javascript" src="TheJuan-AndOnly.github.io/script.js"> </script> 
 <link rel="stylesheet" type="text/css" href="TheJuan-AndOnly.github.io/style.css"> 
-
-
-   
+-->
    
 <title>Degree Evaluation</title>
         <img id="logo" src="Graphics/Final Logo.jpg" width="75" height="75" alt=""/>
     
-<nav class="nav">
+<nav class="nav" id="nav">
   <a class="nav-link" href="main.html"><h3 class="nav-title"> Yearly Schedule </h3></a>
-    <h3 class="nav-link">|</h3>
-  <a class="nav-link" href="program-evaluation.html"><h3 class="nav-title"> Degree Evaluation </h3></a>
-    <h3 class="nav-link">|</h3>
-  <a class="nav-link" href="Academic-Dashboard.html"><h3 class="nav-title"> Academic Dashboard </h3></a>
+       <img id="separator" src="Graphics/middle.png" alt=""/>
+  <a class="nav-link" id="selected" href="program-evaluation.html"><h3 class="nav-title"> Degree Evaluation </h3></a>
 </nav>
 </head>
+    
+    <div class="disclaimer" id="disclaimer">
+    
+    <div id="DISC-title">
+     <img id="mainLogo" src="Main Logo.jpg" alt=""/>
+    <h3>A proof of concept for an improved Merlin</h3>
+    <h6>By Juan A. Jara</h6>
+    </div>
+    
+    <div id="DISC-main-section">
+    <table class="disclaimer-table" >
+      <tbody>
+        <tr>
+          <td><section class="explanation">Courses displayed in this site do are not the full list of courses.</section></td>
+          <td><section class="explanation">Courses in this site are reflective of the trimester system.</section></td>
+          <td><section class="explanation">The yearly schedule page will not link to the program evaluation.</section></td>
+        </tr>
+        <tr>
+          <td><section class="explanation">The courses registered in the program evaluation will not show in your yearly schedule.</section></td>
+          <td><section class="explanation">The program evaluation is being displayed as would a Computer Science major user would see.</section></td>
+          <td><section class="explanation">The program evaluation page would be linked up regarding the user's currecnt major and minor.</section></td>
+        </tr>
+          <tr>
+          <td colspan="3"><section class="explanation">The list of HIP programs at the top of the program evaluation will become active once the student acomplishes them. </section></td> 
+          </tr>
+      </tbody>
+    </table>
+    
+    <button class="disclaimerBTN" onclick="hideDisclaimer()">I understand and wish to proceed.</button>    
+    </div>
+    
+</div>
 
 <body>
-    
+    <div id="main">
     <section class="pageTitle">
         <h3 class="section-title"> Computer Science </h3>
     </section>
-    <hr>
     <div id="quickSectionLink">
         <a href="#title-Gen-Ed"><button class="quickSectionLink">Gen Ed Classes</button></a>
         <a href="#title-major"><button href="#title-major" class="quickSectionLink">Major Electives</button></a>
@@ -40,23 +66,23 @@
     
     <div class="align">
         
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 1.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/student-research"><img class="badgeImage" src="Graphics/badges/Group 1.png" alt=""/></a>
          <span class="badge-descrition">Travel to the Bahamas aboard a research vessel. Take to the laboratory in search of new ways to treat drug addiction. Bring your groundbreaking statistical techniques to Broadway.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 2.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/honors-program"><img class="badgeImage" src="Graphics/badges/Group 2.png" alt=""/></a>
          <span class="badge-descrition">The Honors Program is designed for high-achieving undergraduates pursuing any major. It will engage you in a different kind of learning centered on working with others, global literacy, examining contemporary topics using the perspectives of multiple disciplines, and rigorous undergraduate research.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 3.png" alt=""/>
-         <span class="badge-descrition">nternships offer opportunities for hands-on learning and real world experience to be competitive in your field.  The majority of your colleagues will engage in hands-on learning and close to half of those will have been through a career related internship.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 4.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/internship-programs"><img class="badgeImage" src="Graphics/badges/Group 3.png" alt=""/></a>
+         <span class="badge-descrition">Internships offer opportunities for hands-on learning and real world experience to be competitive in your field.  The majority of your colleagues will engage in hands-on learning and close to half of those will have been through a career related internship.</span></div>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/december-term-study-abroad"><img class="badgeImage" src="Graphics/badges/Group 4.png" alt=""/></a>
          <span class="badge-descrition">During this three-week period between Thanksgiving and Christmas, students can study abroad.  The procedures are easy, and the benefits are great.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 5.png" alt=""/>
+     <div class="badges"><a href="http://catalog.northcentralcollege.edu/preview_course_nopop.php?catoid=1&coid=955"><img class="badgeImage" src="Graphics/badges/Group 5.png" alt=""/></a>
          <span class="badge-descrition">An individualized major is intended for students with clearly defined academic or career objectives who feel that their specific needs are not met by the existing departmental and interdisciplinary majors. A student at North Central College may propose a plan for an Individualized Major that must be approved by a subcommittee of the Undergraduate Academic Standing Committee.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 6.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/verandah-experience"><img class="badgeImage" src="Graphics/badges/Group 6.png" alt=""/></a>
          <span class="badge-descrition">Experience the historic civil rights movement in Alabama. Study architectural treasures. Attend an international film festival. Or just enjoy the exchange of ideas with professors and other students.<br>The Verandah Experience invites students to explore the people and places that make college life - both on- and off-campus - a memorable exchange of ideas.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 7.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/education-abroad"><img class="badgeImage" src="Graphics/badges/Group 7.png" alt=""/></a>
          <span class="badge-descrition">North Central College is one of only five institutions in the world to receive the 2015 Senator Paul Simon Award for Comprehensive Internationalization. We've earned this recognition by greatly expanding our study abroad program and attracting more international students to our campus. This expands the number of opportunities for students to study international fields, offering global awareness programs on campus.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 8.png" alt=""/>
+     <div class="badges"><a href=""><img class="badgeImage" src="Graphics/badges/Group 8.png" alt=""/></a>
          <span class="badge-descrition">North Central’s Chicago Term is an academic immersion in one of the most culturally diverse, dynamic and renowned cities in the country. You’ll use Chicago as your classroom, performing research and completing internships that complement your major.</span></div>
-     <div class="badges"><img class="badgeImage" src="Graphics/badges/Group 9.png" alt=""/>
+     <div class="badges"><a href="https://www.northcentralcollege.edu/program/richter-grants"><img class="badgeImage" src="Graphics/badges/Group 9.png" alt=""/></a>
          <span class="badge-descrition">Study Italian cathedrals. Learn centuries-old brewing techniques in Germany. Help bring water to an impoverished Guatemalan village. Examine how arts criticism affects prestigious awards. Just a few examples of how Richter Grants have given North Central students the opportunity to pursue their academic passions in fascinating locales.The program grants up to $5,000 for individual student research. North Central undergraduates, across academic disciplines, are annually awarded ten of thousands of dollars in grants.</span></div>
     
     </div>
@@ -138,17 +164,17 @@
                  <table class="program-evaluation-table" border="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC160">CSC 160 - Computer Science I</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC161">CSC 161 - Computer Science II</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC210">CSC 210 - Data Structures and Algorithms</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC160">CSC 160<br>Computer Science I</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC161">CSC 161<br>Computer Science II</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC210">CSC 210<br>Data Structures and Algorithms</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC220">CSC 220 - Computer System Concepts</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC230">CSC 230 - Discrete Structures I</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC306">CSC 306 - Software Development in C++</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC220">CSC 220<br>Computer System Concepts</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC230">CSC 230<br>Discrete Structures I</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC306">CSC 306<br>Software Development in C++</td>
                     </tr>
                       <tr>
-                      <td class="program-evaluation-cell" colspan="3" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC495">CSC 495 - Capstone Seminar</td> 
+                      <td class="program-evaluation-cell" colspan="3" onClick="termPromptForClassesON('core'); turnGreen(this.id)" id="programEvaluation-CSC495">CSC 495<br>Capstone Seminar</td> 
                       </tr>
                   </tbody>
                 </table>
@@ -179,14 +205,14 @@
                  <table class="program-evaluation-table" border="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC215">CSC 215  - Introduction to Web Programming</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC415">CSC 415 - Web Applications</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC436">CSC 436 - Human Computer Interaction</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC215">CSC 215 <br>Introduction to Web Programming</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC415">CSC 415<br>Web Applications</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC436">CSC 436<br>Human Computer Interaction</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC464">CSC 464 - Data Mining</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC453">CSC 453 - Systems Analysis</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460 - Database Management Systems</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC464">CSC 464<br>Data Mining</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC453">CSC 453<br>Systems Analysis</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460<br>Database Management Systems</td>
                     </tr>
                   </tbody>
                 </table>
@@ -205,25 +231,26 @@
                  <table class="program-evaluation-table" border="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM100">COM 100 - Introduction to Public Speaking</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM200">COM 200 - Interpersonal Communication</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM214">COM 214 - Group Process</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM100">COM 100<br>Introduction to Public Speaking</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM200">COM 200<br>Interpersonal Communication</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM214">COM 214<br>Group Process</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM230">COM 230 - Business and Professional Communication</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-END265">ENG 265 - Style</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460 - Database Management Systems</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-COM230">COM 230<br>Business and Professional Communication</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-END265">ENG 265<br>Style</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-CSC460">CSC 460<br>Database Management Systems</td>
                     </tr>
                     <tr>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-IFS320">IFS 320 - Multimedia Presentations</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-LEG230">LEV 230 - Conflict Resolution</td>
-                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-MED200">MED 200 - Digital Writing</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-IFS320">IFS 320<br>Multimedia Presentations</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-LEG230">LEV 230<br>Conflict Resolution</td>
+                      <td class="program-evaluation-cell" onClick="termPromptForClassesON('elective'); turnGreen(this.id)" id="programEvaluation-MED200">MED 200<br>Digital Writing</td>
                     </tr>
                   </tbody>
                 </table>
                 </section>
         </div>
         
+    </div>
     </div>
 </body>
 </html>

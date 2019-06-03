@@ -39,11 +39,11 @@ img {
     color: gray;
 }
 .nav {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 0px auto 0px auto;
+    margin: 40px auto 40px auto;
     
 }
 .nav-title {
@@ -52,7 +52,7 @@ a {
     text-decoration: none;
 }
 html {
-    font-family:  trajan-pro-3, serif;
+/*    font-family:  trajan-pro-3, serif;*/
 }
 .totalCreditHoursTitle {
     padding: 15px;
@@ -70,12 +70,14 @@ html {
 .section-title {
     margin: 0px;
     padding: 15px 0px 0px 0px;
+    font-family: Arial;
+    font-size:25px;
+    font-weight: 100;
 }
 .term-title {
     margin: 0;
     padding-bottom: 15px;
-    color: gray;
-    font-size: 45px;
+    color: #b20718;
 }
 .table {
     table-layout: auto;
@@ -89,7 +91,6 @@ html {
 
 
 #program-evaluation {
-    padding: 15px;
     width: 80%;
     margin: auto;
 }
@@ -112,8 +113,8 @@ html {
     margin: 8px;
 }
 .scheduleBTN {
-    background-color: #b20718;
-    margin: 8px;
+    background-color: gray;
+    margin: 0px 30px;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
@@ -121,19 +122,23 @@ html {
     font-size: 15px;
     padding: 5px 5px;
     text-decoration: none;
-    width: 50%;
+    width: 60%;
 }
 .scheduleBTN:hover {
-    background-color: #5cbf2a;
+    background-color: #b20718;
 }
 .one-course {
     margin: 8px 0px;
     border-style:solid;
     border-color: #b20718;
 }
+.course-title
+{
+    margin: 0px 20px;
+}
 
 .program-evaluation-section-details {
-        line-height: 40%;
+        line-height:40%;
 }
 
 .program-evaluation-course-fulfilment-indicator {
@@ -146,9 +151,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     border-style: none;
-    border-spacing: 20px;
-    
-    
+    border-spacing: 20px; 
 }
 
 .program-evaluation-cell {
@@ -156,12 +159,13 @@ html {
     border-style: none;
     color:white;
     background:gray;
+    font: 15px Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 .program-evaluation-cell:hover {
     padding:15px;
     border-style: none;
     color:white;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%,  rgba(255,150,150,1) 100%);
+    background: #b20718
 }
 
 .term-inquiry {
@@ -226,21 +230,44 @@ html {
 }
 td
 {
+    width:10%;
     padding: 5px;
     font-size: 12px;
     justify-content: center;
+    word-wrap:break-word
+
 }
 
 .course-selection
 {
+
     table-layout: auto;
-    border: 1px solid #1C6EA4;
-    background-color: #EEEEEE;
+    border: 1px solid white;
+    background-color: lightgray;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
     margin: 5px;
     word-wrap: break-word;
+}
+table
+{
+    table-layout: fixed;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    display: block;
+}
+tr
+{
+    width: 30%;
+    text-align: left;
+    padding-bottom: 5px;
+    font-size: 12pt;
+    position: relative;
+
+}
+.course-selection-Name
+{
+  font-weight: bold;
 }
 
 #fall-registered-course-list
@@ -266,16 +293,19 @@ td
 
 .quickSectionLink {
     background-color: white;
+    border-style: none;
     margin: 20px 15px;
-    border: 1px solid gray;
     display: inline-block;
     cursor: pointer;
-    color: lightslategray;
+    color: gray;
     font-family: Arial;
     font-size: 18px;
     font-weight: 400;
     padding: 5px 15px;
 
+}
+.quickSectionLink:hover{
+    color:#b20718;
 }
 #quickSectionLink {
     display: flex;
@@ -326,7 +356,7 @@ bcolor: gray;
     color:#b20718;
 }
 .nav-link {
-    font-size: 20px;
+    font-size: 20px;text-transform: uppercase;
     text-decoration: none;
     margin: 0px 15px;
     color: gray;
@@ -343,10 +373,11 @@ bcolor: gray;
     display: flex;
     flex-direction: row;
     align-content: center;
+    margin: 10px;
 }
 .badgeImage {
-    width:100px;
-    height: 100px;
+    width:100%;
+    height: 100%;
     padding: 0px 15px;
     
     -webkit-filter: grayscale(1);
@@ -364,11 +395,12 @@ bcolor: gray;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 15px;
+    cursor: default;
 
   /* Position the tooltip */
   position: absolute;
-    top:400px;
+top:500px;
   z-index: 1;
 }
 .badges:hover{
@@ -389,5 +421,79 @@ bcolor: gray;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width:80%;
 
+}
+#selected.nav-link
+{
+    color:#b20718;
+}
+
+
+#separator {
+    width: 5%;
+    height: 5%;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+
+
+#mainLogo {
+width: 30%;
+
+}
+.disclaimer .explanation
+{
+    padding:15px;
+    border-style: none;
+    color:white;
+    background-color:gray;
+    font: 15px Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.disclaimer-table {
+    text-align: center;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    border-style: none;
+    border-spacing: 20px; 
+}
+
+.disclaimerBTN {
+    background-color: #b20718;
+    margin: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px 5px;
+    text-decoration: none;
+    width: 50%;
+}
+
+
+
+#main {
+    display: none;
+}
+
+#DISC-main-section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#DISC-title {
+display: flex;
+    flex-direction: column;
+    align-items: center;
 }
